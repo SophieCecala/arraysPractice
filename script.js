@@ -13,13 +13,21 @@ function getRandomArbitrary(min, max) {
 
 //document.write(arr);
 
-        /*task 2*/
-for(let i = 0; i < arr.length; i++){
-    if(i % 3 === 2){
-       document.write(`  <strong> ${arr[i]} </strong> `);
-    }else {
-        document.write(` ${arr[i]} `);
-    }
+        /*task 2, 3, 4 */
+    let max = -Infinity;
 
-}
+ for(let i = 0; i < arr.length; i++) {
 
+     if (arr[i] % 3 === 0) {
+         document.write `<font style="color: red"> ${arr[i]} </font>`
+     } else if (arr[i] % 3 === 2) {
+         document.write(`  <strong> ${arr[i]} </strong> `);
+     } else {
+         document.write(` ${arr[i]} `);
+     }
+     if(arr[i] > max){
+         max = arr[i];
+     }else{
+         document.write(`<font style="color: green"> ${max} </font>`)
+     }
+ }
