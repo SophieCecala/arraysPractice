@@ -29,8 +29,22 @@ function getRandomArbitrary(min, max) {
          document.write(`<strong>${arr[i]}</strong> `);
      }else if(arr[i] % 3 === 0){
          document.write(`<font style="color: red">${arr[i]}</font> `)
-     } else{
+     }else if(arr[i] < 0 && arr[i] % 3 === 0 && i % 3 === 2){
+          document.write(`<font style="color: red"><strong><ins>${arr[i]}</ins></strong></font> `)
+      }else if(arr[i] < 0 && arr[i] === max && i % 3 === 2){
+          document.write(`<font style="color: green"><strong><ins>${arr[i]}</ins></strong></font> `)
+      }else if(arr[i] < 0 && arr[i] % 3 === 0){
+          document.write(`<font style="color: red"<ins>${arr[i]}</ins></font> `)
+      }else if(arr[i] < 0 && i % 3 === 2){
+          document.write(`<ins><strong>${arr[i]}</strong></ins> `)
+      }else if(arr[i] < 0){
+          document.write(`<ins>${arr[i]}</ins>` )
+      }else{
          document.write(`${arr[i]} `);
      }
+    }
+
+    for(let i = 0; i < arr.lenght; i++){
+        if (i % 3 ===2)
     }
 
