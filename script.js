@@ -37,14 +37,64 @@
 //         document.write(num)
 //     }
 
-    const fruits = ["banana", "watermelon", "strawberry", "lemon", "ananas", "kiwi", "mango"];
+    const fruits = ["banana", "watermelon", "strawberry", "lemon", "pineapple", "kiwi", "mango"];
+
 
     let maxLength = 0;
+    let longestFruit;
+    let shorterFruit;
+    let shortestFruit;
 
     for(let i = 0; i < fruits.length; i++) {
         if(fruits[i].length > maxLength ){
-            maxLenght = fruits[i].length;
+            maxLength = fruits[i].length;
+            longestFruit = fruits[i];
         }
-
     }
-    document.write(maxLength);
+    // document.write(longestFruit);
+    // document.write(' \n');
+
+    const shorterFruits = fruits.filter(fruit => fruit.length < maxLength);
+
+    let maxShorterLenght = 0;
+
+    for(let i = 0; i < shorterFruits.length; i++){
+        if(shorterFruits[i].length > maxShorterLenght){
+            maxShorterLenght = shorterFruits[i].length;
+            shorterFruit = shorterFruits[i];
+        }
+    }
+    // document.write(shorterFruit);
+    // document.write(' \n');
+
+    let minimumLength = maxLength;
+
+    for(let i = 0; i < fruits.length; i++) {
+        if(fruits[i].length < minimumLength){
+            minimumLength = fruits[i].length;
+            shortestFruit = fruits[i];
+        }
+    }
+    // document.write(shortestFruit);
+
+    const fruits6 = ["banana", "watermelon", "strawberry", "lemon", "pineapple", "kiwi", "mango"];
+
+    for(let i = 0; i < fruits6.length; i++) {
+        if(fruits6[i].length < 5){
+            fruits6.splice(i, 1)
+        }
+    }
+    // document.write(' \n');
+    // document.write(fruits6);
+
+
+    let fruit = ["banana", "lemon", "mango", "apple", "pineapple"];
+    let berry = ["strawberry", "blackberry", "blueberry", "cranberry", "gooseberry"];
+
+    let merge = fruit.concat(berry);
+    merge.sort();
+
+    document.write(merge);
+
+
+    let guestlist = prompt("");
