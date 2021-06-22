@@ -94,7 +94,23 @@
     let merge = fruit.concat(berry);
     merge.sort();
 
-    document.write(merge);
+    // document.write(merge);
+
+    // Task 9
+
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let guestList = prompt("who is coming to the party?");
+    const guests = [];
+
+    const guestListArr = guestList.split(',');
 
 
-    let guestlist = prompt("");
+     for(let i = 0; i < guestListArr.length; i++){
+         let firstLetter = guestListArr[i][0].toLowerCase();
+         if(vowels.includes(firstLetter) ){
+             guests.push(guestListArr[i]);
+         }
+     }
+
+    const result = guests.join('- ');
+    document.write(result);
